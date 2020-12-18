@@ -8,7 +8,16 @@ describe("string_calc", () => {
     it("should return 3 for 1,2", () => {
         expect(string_calc("1,2")).toBe(3);
     });
+
+    it("should return 6 for 1,2,3", () => {
+        expect(string_calc("1,2,3")).toBe(6);
+    });
+
+    it("should return 6 for 1,2,3", () => {
+        expect(string_calc("1\n2,3")).toBe(6);
+    });
 });
+
 ​
 function string_calc(s: string) {
     if (s === "") return 0
