@@ -4,7 +4,6 @@ export function string_calc(s: string) {
     if (s === "") return 0
     if (s.startsWith("//")) {
         delimiter = s.split("\n")[0].substring(2)
-        console.log(delimiter)
         s = s.substring(`//${delimiter}\n`.length);
     }
 
