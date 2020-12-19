@@ -7,6 +7,10 @@ describe("string_calc", () => {
     it("should return 1 for 1", () => {
         expect(string_calc("1")).toBe(1);
     });
+
+    it("should return 1 for 1", () => {
+        expect(string_calc("-1")).toBe(-1);
+    });
     it("should return 3 for 1,2", () => {
         expect(string_calc("1,2")).toBe(3);
     });
@@ -25,5 +29,13 @@ describe("string_calc", () => {
 
     it("should return 6 for //;\n1,2;3", () => {
         expect(string_calc("//;\n1,2;3")).toBe(6);
+    });
+
+    it("should return 6 for //x\n1,2;3", () => {
+        expect(string_calc("//x\n1,2x3")).toBe(6);
+    });
+
+    it("should return 6 for //x\n1,2;3", () => {
+        expect(string_calc("//-\n1,2-3")).toBe(6);
     });
 });
