@@ -8,6 +8,6 @@
         "sourceMap": false,
         "outDir": "./dist",
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "src/test/calculator.test.ts"],
     "exclude": ["node_modules"]
 }
